@@ -8,9 +8,8 @@ async function getapi(type='cairo') {
 
   try {
     
-        let myreq = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=0dbeedfaeb5d4641926232151252406&q=${type}&days=3`)
+        let myreq = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=0dbeedfaeb5d4641926232151252406&q=${type}&days=3`)
     let mydata = await myreq.json()
-    console.log(mydata);
     
     weather = mydata.forecast.forecastday
     city=mydata.location.name
